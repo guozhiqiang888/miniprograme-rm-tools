@@ -1,0 +1,44 @@
+<div class="report-waper">
+    <div class="title-waper">
+        <div class="font-title">Summary of Guangzhou team</div>
+        <div class="font-data">From 1Jan 2019</div>
+    </div>
+    <div class="pipi-wapper">
+        <div class="pipi-shown">
+            <div echarts [options]="chartOption" class="chart" ></div>
+            <div class="tootle-waper">
+                <div class="tootle-font">Prospects</div>
+                <div class="tootle">4,000</div>
+            </div>
+        </div>
+        <div class="pipi-items">
+            <div class="pipi-title">Revenue (%)</div>
+            <div class="pipi-title-item">
+                <div class="block-items progress"></div>
+                <div class="font-items">1,080 prospects in progress (55%)</div>
+            </div>
+            <div class="pipi-title-item">
+                <div class="block-items completed"></div>
+                <div class="font-items">2,200 prospects completed (27%)</div>
+            </div>
+            <div class="pipi-title-item">
+                <div class="block-items closed"></div>
+                <div class="font-items">480 prospects closed (12%)</div>
+            </div>
+            <div class="pipi-title-item">
+                <div class="block-items cold"></div>
+                <div class="font-items">240 prospects cold (6%)</div>
+            </div>
+        </div>
+    </div>
+    <div class="report-details">
+        <div class="content-header" *ngFor="let item of itemList,  let i=index" (click)="itemRecord(i)">
+            <div class="img-waper">
+                <img class="img-icon" src="{{item.titleImg}}">
+                <div class="rm-status">{{item.title}}</div>
+            </div>
+            <img id={{i}} class="icon-right {{item.iconStyle}}" src="{{item.titleImgRight}}">
+        </div>
+    </div>
+</div>
+<tabbar></tabbar>

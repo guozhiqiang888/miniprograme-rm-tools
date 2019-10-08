@@ -1,0 +1,30 @@
+.tabbar-waper{
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    bottom: 0px;
+    border-top: 0.51px solid rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+.tabbar-content{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.item{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.item-img{
+    width: 20px;
+    height: 20px;
+}
+p{
+    margin: 0 0;
+    font-size: 12px;
+}
+.checked-style{
+    color:#CA2A23;
+}

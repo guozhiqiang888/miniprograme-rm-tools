@@ -1,0 +1,9 @@
+<div class="list-content-waper">
+    <div class="list-content" *ngFor = "let childItem of list, let i=index">
+        <div>{{childItem.name}}</div>
+        <input name="name" type="radio" (change) = 'rediosChange(i)' checked="{{childItem.checked? 'checked':''}}">
+        <i></i>
+    </div>
+    
+    <input class="buttons {{btnDisable}}" (click) = "statusUpdate()" type="button" value="{{'BTNS.update' | translate}}">
+</div>

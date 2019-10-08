@@ -1,0 +1,48 @@
+<div class="content">
+    <div class="schedview">
+        Schedule overview
+        <div (click)="add()" class="add"></div>
+    </div>
+    <div class="rm-content">
+        <div class="search">
+            <input class="input {{searchFocus}}" placeholder="Search" (focus)= "onInput()" (blur)= "inputBlur()"/>
+            <div *ngIf="searchFocus == ''" class="cancel">Cancel</div>
+            <div *ngIf="searchFocus == ''" class="voice"></div>
+        </div>
+        <div class="alertmsg-waper">
+            <div class="item">
+                <label class="item-1"> 1</label>
+                <div class="item-waper">
+                    <div class="item-2">TODAY</div>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="item">
+                <label class="item-1"> 1</label>
+                <div class="item-waper">
+                    <div class="item-2">TODAY</div>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="item">
+                <label class="item-1"> 1</label>
+                <div class="item-waper">
+                    <div class="item-2">TODAY</div>
+                </div>
+            </div>
+            <div class="slidemenu">
+                <img class="img" (click) = "filterFunction()" src="assets/imgs/icn_Filter.png" alt="">
+            </div>
+        </div>
+        <div class="content-box">
+            <prespectitem *ngFor="let item of prospectLists" [prospectItem] = "item"></prespectitem>
+            <!-- <prespectitem></prespectitem>
+            <prespectitem></prespectitem>
+            <prespectitem></prespectitem>
+            <prespectitem></prespectitem>
+            <prespectitem></prespectitem> -->
+        </div>
+    </div>
+    <tabbar></tabbar>
+</div>
+<filter class="{{hidden}}" [filterState]='filtershow' (filterHiden)=child($event)></filter>

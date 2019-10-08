@@ -1,0 +1,46 @@
+<div class="report-waper">
+    <div class="title-waper">
+        <input class="searchbox" placeholder="Search">
+    </div>
+    <div class="report-details">
+        <div class="title-list">
+            <div>Prospects record</div>
+            <img class="icon-sort" src="assets/imgs/icn_Sort.png" (click)="sortAction()"/>
+        </div>
+        <div class="content-header" *ngFor="let item of itemList,  let i=index" (click)="itemRecord(i)">
+            <div class="img-waper">
+                <div class="rm-status">{{item.title}}</div>
+                <div class="sub-font">
+                    <div>{{item.subText}}</div>
+                    <div>{{item.date}}</div>
+                </div>
+            </div>
+            <img id={{i}} class="icon-right" src="assets/imgs/icn_chevron_right_thick.png">
+        </div>
+    </div>
+</div>
+<div class="content {{pageConfig.shade.style}}" (click)="shadeClose()">
+    <div class="main-waper" *ngIf ="pageConfig.shade.flag == 'export'">
+        <div class="main-item">
+            <div>Export to</div>
+            <img class="main-icon" src="assets/imgs/icn_Close.png" alt="" (click)= "shadeClose()">
+        </div>
+        <div class="main-item" *ngFor="let item of pageConfig.exportList">
+            <div class="main-item-title">{{item.name}}</div>
+            <img class="icon-right" src="assets/imgs/icn_chevron_right_thick.png" alt="">
+        </div>
+    </div>
+    <div class="main-waper" *ngIf="pageConfig.shade.flag == 'sort'">
+        <div class="main-item">
+            <div>Sort by</div>
+            <img class="main-icon" src="assets/imgs/icn_Close.png" alt="" (click)= "shadeClose()">
+        </div>
+        <div class="list-waper">
+            <div class="list-content" *ngFor = "let childItem of pageConfig.sortlist">
+                <div>{{childItem.name}}</div>
+                <input name="sort" type="radio" (change)="sortBy()" checked="{{childItem.checked? 'checked':''}}">
+                <i></i>
+            </div>
+        </div>
+    </div>
+</div>

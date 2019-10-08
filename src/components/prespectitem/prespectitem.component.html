@@ -1,0 +1,37 @@
+<div class="presepec-content" (click)= "itemPresepecHandler()">
+    <div class="status">
+        <div class="status-handle">
+            <div class="status-view">{{prospectInformation.ProspectPriority}}</div>
+            <div class="title">
+                <div class="title-waper">{{prospectInformation.ConfirmedProspectEnglishName}} 
+                    <div *ngIf = "generalInformation.IsNew" class="new"></div>
+                </div>
+                <div class="status-date">Overdue</div>
+            </div>
+            <div class="date">
+                <div class="date-day">12</div>
+                <div class="date-month">JUL</div>
+            </div>
+        </div>
+        <div class="status-title">
+            <div class="action-status">{{generalInformation.ProspectStatus}}</div>
+        </div>
+        <div class="status-info">
+            <div class="info-item">
+                <img class="info-item-img" src="assets/imgs/icn_User_multiple.png" alt="">
+                <div class="info-item-content">
+                    <div class="label1">Referral</div>
+                    <div class="label2">{{referrerInformation.ReferrerName}}({{referrerInformation.ReferrerPersonTitle}})</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <img class="info-item-img" src="assets/imgs/icn_User_staff.png" alt="">
+                <div class="info-item-content">
+                    <div class="label1">Main contact</div>
+                    <div class="label2">May Hung</div>
+                </div>
+            </div>
+            <div class="icon-right"></div>
+        </div>
+    </div>
+</div>

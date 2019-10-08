@@ -1,0 +1,9 @@
+<div class="content {{filterState}}">
+    <div class="close-bar">
+        <label class="filter-label">Filter</label>
+        <img  (click)= "closeFilter()" class="close-icon" src="assets/imgs/icn_Close.png" alt="">
+    </div>
+    <div class="list-content">
+        <headerlist [initData]='headerlist'></headerlist>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="list-waper" *ngFor = 'let item of initData'>
+    <div class="list-title">
+        {{item.title}}
+    </div>
+    <div class="list-content" *ngFor = "let childItem of item.list">
+        <div>{{childItem.name}}</div>
+        <input name="{{item.listname}}" type="radio" checked="{{childItem.checked? 'checked':''}}">
+        <i></i>
+    </div>
+</div>

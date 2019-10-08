@@ -1,0 +1,55 @@
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-top: 10px solid #EDEDED;
+}
+.close-bar{
+    width: 90%;
+    padding: 20px 20px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+.close-icon{
+    width: 15px;
+    height: 15px;
+    right: 20px;
+    position: absolute;
+}
+.list-content{
+    width: 90%;
+    padding: 0px 20px 0px 20px;
+}
+.animation-hid{
+    animation-duration: 1s;
+    animation-name: myanimation-hid;
+    transform: translate(0,0);
+    animation-fill-mode: forwards;
+}
+.hidden{
+    display: none;
+}
+@keyframes myanimation-hid {
+    from { position: absolute; opacity: 1; top: 0;}
+    to { position: absolute; opacity: 0;top :100vh;}
+}
+@-webkit-keyframes myanimation-hid{
+    from { position: absolute; opacity: 1; top: 0;}
+    to { position: absolute; opacity: 0;top :100vh;}
+}
+@keyframes myanimation {
+    from { position: absolute; opacity: 0;top :100vh}
+    to { position: absolute; opacity: 1; top: 0;}
+}
+@-webkit-keyframes myanimation{
+    from { position: absolute; opacity: 0;top :100vh}
+    to { position: absolute; opacity: 1; top: 0;}
+}
+.animation-show{
+    animation-duration: 1s;
+    animation-name: myanimation;
+    transform: translate(0,0);
+    display: block;
+    animation-fill-mode: forwards;
+}

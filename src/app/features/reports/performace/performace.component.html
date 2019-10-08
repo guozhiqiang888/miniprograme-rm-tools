@@ -1,0 +1,96 @@
+<div class="report-waper">
+    <div class="title-waper">
+        <div *ngFor="let item of pageConfig.navigation, let i = index" (click)= "navigationFilter(i)" class="border {{item.style}}">{{item.text}}</div>
+    </div>
+    <div class="date-waper">
+        <div><img class="icon" src="assets/imgs/icn_Chevron_left_thick.png" alt=""></div>
+        <div class="fonter">7 Jul - 13 Jul 2019</div>
+        <div><img class="icon" src="assets/imgs/icn_chevron_right_thick.png" alt=""></div>
+    </div>
+    <div class="period-waper" *ngIf="periods">
+            <div class="period-item">
+                <div>
+                    <div class="period-font">Period start date</div>
+                    <div class="period-date">01/07/2019</div>
+                </div>
+                <img class="img-calendar" src="assets/imgs/icn_Calendar.png" alt="">
+            </div>
+            <div class="period-item">
+                <div>
+                    <div class="period-font">Period end date</div>
+                    <div class="period-date">30/07/2019</div>
+                </div>
+                <img class="img-calendar" src="assets/imgs/icn_Calendar.png" alt="">
+            </div>
+    </div>
+    <div class="pipi-wapper">
+        <div class="pipi-shown">
+            <img class="icon-export" src="assets/imgs/icn_Export.png" (click)="exprotAction()"/>
+            <div echarts [options]="chartOption" class="chart" ></div>
+            <div class="tootle-waper">
+                <div class="tootle-font">Prospects</div>
+                <div class="tootle">4,000</div>
+            </div>
+        </div>
+        <div class="pipi-items">
+            <div class="pipi-title">Revenue (%)</div>
+            <div class="pipi-title-item">
+                <div class="block-items progress"></div>
+                <div class="font-items">1,080 prospects in progress (55%)</div>
+            </div>
+            <div class="pipi-title-item">
+                <div class="block-items completed"></div>
+                <div class="font-items">2,200 prospects completed (27%)</div>
+            </div>
+            <div class="pipi-title-item">
+                <div class="block-items closed"></div>
+                <div class="font-items">480 prospects closed (12%)</div>
+            </div>
+            <div class="pipi-title-item">
+                <div class="block-items cold"></div>
+                <div class="font-items">240 prospects cold (6%)</div>
+            </div>
+        </div>
+    </div>
+    <div class="report-details">
+        <div class="title-list">
+            <div>Prospects record</div>
+            <img class="icon-sort" src="assets/imgs/icn_Sort.png" (click)="sortAction()"/>
+        </div>
+        <div class="content-header" *ngFor="let item of itemList,  let i=index" (click)="itemRecord(i)">
+            <div class="img-waper">
+                <div class="rm-status">{{item.title}}</div>
+                <div class="sub-font">
+                    <div>{{item.subText}}</div>
+                    <div>{{item.date}}</div>
+                </div>
+            </div>
+            <img id={{i}} class="icon-right" src="assets/imgs/icn_chevron_right_thick.png">
+        </div>
+    </div>
+</div>
+<div class="content {{pageConfig.shade.style}}" (click)="shadeClose()">
+    <div class="main-waper" *ngIf ="pageConfig.shade.flag == 'export'">
+        <div class="main-item">
+            <div>Export to</div>
+            <img class="main-icon" src="assets/imgs/icn_Close.png" alt="" (click)= "shadeClose()">
+        </div>
+        <div class="main-item" *ngFor="let item of pageConfig.exportList">
+            <div class="main-item-title">{{item.name}}</div>
+            <img class="icon-right" src="assets/imgs/icn_chevron_right_thick.png" alt="">
+        </div>
+    </div>
+    <div class="main-waper" *ngIf="pageConfig.shade.flag == 'sort'">
+        <div class="main-item">
+            <div>Sort by</div>
+            <img class="main-icon" src="assets/imgs/icn_Close.png" alt="" (click)= "shadeClose()">
+        </div>
+        <div class="list-waper">
+            <div class="list-content" *ngFor = "let childItem of pageConfig.sortlist">
+                <div>{{childItem.name}}</div>
+                <input name="sort" type="radio" (change)="sortBy()" checked="{{childItem.checked? 'checked':''}}">
+                <i></i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="tabbar-waper">
+    <div class="tabbar-content">
+        <div *ngFor="let item of tabbarOptions, let i=index" class="item {{item.currentChecked}}" (click)="checked(i)">
+            <img class="item-img" src="{{item.currentChecked? item.imgAction: item.img}}">
+            <p>{{item.text}}</p>
+        </div>
+        <!-- <div class="item {{tabbarOptions.currentChecked =='1'? 'checked-style': ''}}" (click)="checked('/reports')">
+            <img class="item-img" src="assets/imgs/tabbar/icn_WeChat_icon.png">
+            <p>Reports</p>
+        </div>
+        <div class="item {{tabbarOptions.currentChecked=='2'? 'checked-style': ''}}" (click)="checked('/news')">
+            <img class="item-img" src="assets/imgs/tabbar/icn_WeChat_icon.png">
+            <p>Market News</p>
+        </div> -->
+    </div>
+</div>

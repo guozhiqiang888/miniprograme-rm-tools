@@ -1,0 +1,50 @@
+.content-list{
+    widows: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EDEDED;
+    padding: 10px 0px;
+}
+.list-title{
+    font-size: 16px;
+}
+p{
+    margin: 0px;
+}
+.list-warning{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 14px;
+    margin-top: 5px;
+    border: none;
+    width: 90%;
+    height: 20px;
+    float: left;
+    /* color: #949494; */
+}
+.list-icon{
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+.icon-right{
+    width: 12px;
+    height: 18px;
+    float: right;
+}
+.icon-down{
+    width: 20px;
+    height: 12px;
+}
+.list-msg{
+    width: 100%;
+}
+.comments{
+    display: flex;
+    justify-content: space-between;
+}
+.commer-font{
+    height: 10px;
+    font-size: 12px;
+    float: right;
+}
