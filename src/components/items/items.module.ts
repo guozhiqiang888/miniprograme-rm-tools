@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { ItemsComponent } from './items.component';
 
-
 @NgModule({
   declarations: [
       ItemsComponent

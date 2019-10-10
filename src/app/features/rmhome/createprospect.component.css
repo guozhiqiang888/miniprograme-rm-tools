@@ -1,4 +1,4 @@
-
+@import "../../../assets/resource/font-style.css";
 .content{
     width: 93%;
     height: 100%;
@@ -32,7 +32,11 @@
 }
 .rm-status{
     margin-left: 10px;
-    font-size: 16px;
+    color: #333333;	
+    font-family: "SF Pro Text";	
+    font-size: 16px;	
+    letter-spacing: -0.32px;	
+    line-height: 24px;
 }
 .content-list{
     widows: 100%;
@@ -44,9 +48,7 @@
 .items-waper{
     width: 100%;
 }
-.list-title{
-    font-size: 16px;
-}
+
 .list-warning{
     font-size: 14px;
     margin-top: 5px;
@@ -59,6 +61,12 @@
 .buttons{
     width: 100%;
     height: 40px;
+    color: #333333;	
+    font-family: "SF Pro Text";	
+    font-size: 16px;	
+    font-weight: 500;	
+    letter-spacing: -0.32px;	
+    line-height: 24px;
     margin-top: 10px;
 }
 .disable{

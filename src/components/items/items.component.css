@@ -7,20 +7,27 @@
     padding: 10px 0px;
 }
 .list-title{
-    font-size: 16px;
+    color: #333333;	
+    font-family: "SF Pro Text";	
+    font-size: 16px;	
+    letter-spacing: -0.32px;	
+    line-height: 24px;
 }
 p{
     margin: 0px;
 }
 .list-warning{
-    font-family: 'Franklin Gothic Medium';
-    font-size: 14px;
     margin-top: 5px;
     border: none;
     width: 90%;
     height: 20px;
     float: left;
-    /* color: #949494; */
+    color: #333333;	
+    font-family: "SF Pro Text";	
+    font-size: 14px;	
+    font-weight: 300;	
+    letter-spacing: -0.15px;	
+    line-height: 20px;
 }
 .list-icon{
     width: 20px;
