@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommenService } from '../../../../services/commen.service'
+import { RequestService } from "../../../../commenService/request.service"
 
 @Component({
   selector: 'createprospect',
@@ -13,8 +14,10 @@ export class CreateprospectComponent implements OnInit{
   public hidden = 'hidden';
   public paramsValue:any;
   public pageParams:object;
+  prospectDetails:any = [];
   constructor(
     public activeRoute:ActivatedRoute,
+    private requestService:RequestService,
     public commenService:CommenService
   ){
     
@@ -33,7 +36,25 @@ export class CreateprospectComponent implements OnInit{
       ]
     }
     this.commenService.currentSelected(this.paramsValue);
+    this.getProspectDetail();
   }
+
+  getProspectDetail(){
+    const _this = this;
+    this.requestService.requestGSP({
+      requestName:"prospectDetail",
+      method:"post",
+      params:{}
+    }, function(data){
+      try{
+        _this.prospectDetails = JSON.parse(data)['body']['prospectDetail'];
+      }catch(e){
+        console.error(e);
+      }
+      console.log(_this.prospectDetails);
+    });
+  }
+
   toogleDownUp(e,isDefaultShow){
     console.log(e,isDefaultShow);
     if(isDefaultShow){
