@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CommenService } from '../../../../services/commen.service'
-import { RequestService } from "../../../../commenService/request.service"
-
+import { optionsDetials } from 'src/assets/dummy/prospectdetails';
+import { RequestService } from 'src/app/commenService/request.service';
+import { CommenService } from 'src/app/services/commen.service';
 @Component({
   selector: 'createprospect',
   templateUrl: './createprospect.component.html',
@@ -23,7 +23,7 @@ export class CreateprospectComponent implements OnInit{
     
   }
   ngOnInit(){
-    this.paramsValue=JSON.parse(this.activeRoute.queryParams['value']['params']);
+    this.paramsValue= optionsDetials; //JSON.parse(this.activeRoute.queryParams['value']['params']);
     let hash = window.location.hash;
     if(hash.includes('details')){
       this.btns=[

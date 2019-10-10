@@ -43,7 +43,7 @@ export class ItemsComponent implements OnInit{
                 this.commenService.setLocStorage('type', 'PRIORITY');
                 break;
         }
-        this.router.navigate(['/status'],{queryParams:{value:JSON.stringify(editParams)}});
+        this.router.navigate(['/prospectdetails/status'],{queryParams:{value:JSON.stringify(editParams)}});
     }
     inputEvent(itemName,event){
         if('Comments' == itemName){
