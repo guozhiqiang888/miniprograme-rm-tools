@@ -353,10 +353,40 @@ Apache License
  See the License for the specific language governing permissions and
  limitations under the License.
 
+<<<<<<< HEAD
+=======
+@ngx-translate/core@10.0.2
+MIT
+MIT
+
+@angular/core@6.1.10
+MIT
+MIT
+
+@angular/common@6.1.10
+MIT
+MIT
+
+@ngx-translate/http-loader@3.0.1
+MIT
+MIT
+
+@angular/router@6.1.10
+MIT
+MIT
+
+>>>>>>> c9f114bcba2d1981d17b92bb2cd56ba739ef6d36
 @angular/platform-browser@6.1.10
 MIT
 MIT
 
+<<<<<<< HEAD
+=======
+@angular/forms@6.1.10
+MIT
+MIT
+
+>>>>>>> c9f114bcba2d1981d17b92bb2cd56ba739ef6d36
 tslib@1.10.0
 Apache-2.0
 Apache License
@@ -415,6 +445,7 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 
 END OF TERMS AND CONDITIONS
 
+<<<<<<< HEAD
 @angular/common@6.1.10
 MIT
 MIT
@@ -441,4 +472,8 @@ MIT
 
 @angular/forms@6.1.10
 MIT
+=======
+@angular/http@6.1.10
+MIT
+>>>>>>> c9f114bcba2d1981d17b92bb2cd56ba739ef6d36
 MIT
