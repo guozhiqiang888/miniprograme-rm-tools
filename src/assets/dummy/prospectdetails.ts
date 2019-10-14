@@ -12,7 +12,7 @@ export const optionsDetials ={
             {name: 'Status',  iconStyle:'icon-right',
             imgSrc:'assets/imgs/icn_chevron_right_thick.png',value: '', placeholder:'Select status'},
             {name: 'Tracking end date', iconStyle:'list-icon',
-            imgSrc:'assets/imgs/icn_Calendar.png', value: '', placeholder:'Select date'},
+            imgSrc:'assets/imgs/icn_Calendar.png', value: '', placeholder:'Calendar'},
             {name: 'Proiority', iconStyle:'icon-right',
             imgSrc:'assets/imgs/icn_chevron_right_thick.png', value: '', placeholder:'Select Priority'}
        ]
@@ -33,7 +33,9 @@ export const optionsDetials ={
            {name: 'Secondary enail address', value: '', placeholder:'Enter here'},
            {name: 'Sales revenus.Net worth(RMB)', value: '', placeholder:'Enter here'},
            {name: 'Number of employees', value: '', placeholder:'Enter here'},
-           {name: 'Country',iconStyle:'icon-down',imgSrc:'assets/imgs/icn_Chevron_down_thick.png', value: '', placeholder:'Select country'}
+           {name: 'Country',iconStyle:'icon-down',imgSrc:'assets/imgs/icn_Chevron_down_thick.png', value: '', placeholder:'Select country'},
+           {name: 'Industry', value: 'Retail', placeholder:'Enter here'},
+           {name: 'Website', value: 'Wellspring.com', placeholder:'Enter here'}
        ]
      },{
        title: 'Referrer information',

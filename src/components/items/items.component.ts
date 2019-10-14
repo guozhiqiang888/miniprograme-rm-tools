@@ -2,6 +2,9 @@ import { Component , Input, OnInit} from '@angular/core'
 import { Router } from '@angular/router';
 import { editsConfig} from '../../assets/dummy/edits'
 import { CommenService } from '../../app/services/commen.service'
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date';
+import { $ } from 'protractor';
 
 @Component({
     selector: 'items',
@@ -15,13 +18,14 @@ export class ItemsComponent implements OnInit{
     pageParams:object;
     inputLength:number = 0;
     inputEnd:number = 100;
-    public imgSrc = ''
-    // icn_chevron_right_thick.png
-    // icn_Calendar_Active.png
+    public imgSrc = '';
+    date: NgbDate = new NgbDate(1789, 7, 14);
     constructor(private router:Router,
         private commenService:CommenService
         ){}
     ngOnInit(){
+        const now = new Date();
+        this.date = new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
         console.log(this.params);
     }
     edits(index, type){
@@ -50,4 +54,5 @@ export class ItemsComponent implements OnInit{
             this.inputLength= event.currentTarget.value.length;
         }
     }
+
 }
