@@ -2,9 +2,7 @@ import { Component , Input, OnInit} from '@angular/core'
 import { Router } from '@angular/router';
 import { editsConfig} from '../../assets/dummy/edits'
 import { CommenService } from '../../app/services/commen.service'
-import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date';
-import { $ } from 'protractor';
 
 @Component({
     selector: 'items',

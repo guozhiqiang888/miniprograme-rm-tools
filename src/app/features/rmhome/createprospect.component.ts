@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { optionsDetials } from 'src/assets/dummy/prospectdetails';
+import { optionsDetials } from 'src/app/features/rmhome/prospectdetails';
 import { RequestService } from 'src/app/commenService/request.service';
 import { CommenService } from 'src/app/services/commen.service';
 @Component({

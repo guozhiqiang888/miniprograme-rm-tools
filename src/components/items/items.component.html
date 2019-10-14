@@ -1,6 +1,6 @@
 
 <div class="content-list" *ngFor='let item of params, let i=index'>
-    <div class="list-msg">
+    <div class="list-msg" *ngIf="item.name">
         <div class="list-title">{{item.name}}</div>
         <div class="list-warning" *ngIf='item.imgSrc' [ngClass] = "{'calender-list': item.placeholder == 'Calendar'}">
             <p *ngIf="item.value!='' && item.placeholder !== 'Calendar'">
@@ -22,4 +22,20 @@
             <img class="{{item.iconStyle}}" src="{{item.imgSrc}}" (click)= "edits(i, item.iconStyle)">
         </div>
     </div>
+    <!-- <div *ngIf="item.child" style="width: 100%">
+        <div class="content-header">
+            <div class="img-waper">
+                <img class="img-icon" src="{{item.imgSrc}}">
+                <div class="rm-status">{{item.child}}</div>
+            </div>
+            <img id={{i}} class="icon-right {{item.iconStyle}}" src="{{item.iconRight}}" (click)= 'toogleDownUp($event,item.defaultShow)'>
+        </div>
+        <div class="items-waper" *ngIf='item.defaultShow'> 
+            <div *ngFor = 'let child of item.list; let childIndex = index' class="childlist">
+                <div class="list-title">{{child.name}}</div>
+                <input type="text" placeholder="{{child.value ==''? child.placeholder : '' }}" value="{{child.value ==''? '' : child.value }}" 
+                class="list-warning" [ngStyle]=" {'width': item.name=='Comments'? '100%': '95%'}" (input) = "inputEvent(item.name,$event)">
+            </div>
+        </div>
+    </div> -->
 </div>

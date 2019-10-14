@@ -1,6 +1,6 @@
 <div class="content">  
     <div *ngFor='let item of paramsValue.lists; let i=index'>
-        <div class="content-header">
+        <div class="content-header" *ngIf="item.showTitle">
             <div class="img-waper">
                 <img class="img-icon" src="{{item.titleImg}}">
                 <div class="rm-status">{{item.title}}</div>
