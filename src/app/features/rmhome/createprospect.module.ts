@@ -11,10 +11,9 @@ import { AlertModule } from 'src/components/alertbox/alert.module';
 import { ItemsModule } from 'src/components/items/items.module';
 import { StatusModule } from './features/status/status.module';
 import { CommenService } from 'src/app/services/commen.service';
-
 @NgModule({
   declarations: [
-    CreateprospectComponent
+    CreateprospectComponent,
   ],
   imports: [
     FormsModule,

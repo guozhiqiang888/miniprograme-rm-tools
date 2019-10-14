@@ -9,6 +9,7 @@
             <p *ngIf="item.value==''">
                 {{item.placeholder}}
             </p>
+            <input type="text" readonly='true' class="datepickerstyle" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()"/>
         </div>
         <input *ngIf="!item.imgSrc" type="text" placeholder="{{item.value ==''? item.placeholder : '' }}" value="{{item.value ==''? '' : item.value }}" 
         class="list-warning" [ngStyle]=" {'width': item.name=='Comments'? '100%': '90%'}" (input) = "inputEvent(item.name,$event)">

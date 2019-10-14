@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 // import { CreateprospectModule } from './features/createprospect/createprospect.module';
 import { CommonModule } from '@angular/common';
 import { ItemsComponent } from './items.component';
+import {NgbModule,NgbDatepickerModule,NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ItemsComponent } from './items.component';
   imports: [
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgbModule
   ],
   exports:[ItemsComponent],
   providers: []
