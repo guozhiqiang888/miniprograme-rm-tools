@@ -1,6 +1,6 @@
 export const appConfig={
-    domain:'',
+    domain:'http://39.98.183.95:9080',
     local:'en',
-    isDummy: true,
+    isDummy: false,
     dummyBase:"/dummy/dummydata/"
 }

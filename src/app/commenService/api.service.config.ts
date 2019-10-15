@@ -17,7 +17,7 @@ export const apiServiice={
         }
     },
     prospectDetail:{
-        url: '/weconnectapp/v1/prospects',
+        url: '/demo/prospect/getDetailTest/P1034328433',
         errots:{
             '001':'This IP address has no access',
             '002':'The signature is invalid',

@@ -45,11 +45,12 @@ export class ProspectDetailsComponent implements OnInit{
     const _this = this;
     this.requestService.requestGSP({
       requestName:"prospectDetail",
-      method:"post",
+      method:"get",
       params:{}
     }, function(data){
       try{
-        _this.prospectDetails = JSON.parse(data)['body']['prospectDetail'];
+        // _this.prospectDetails = JSON.parse(data)['body'];
+        _this.prospectDetails = _this.prospectDetailsService.responseMapping(JSON.parse(data));//['body']
       }catch(e){
         console.error(e);
       }
@@ -63,6 +64,10 @@ export class ProspectDetailsComponent implements OnInit{
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_down_thick.png'
     }else{
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_up_thick.png'
+    }
+    if('2' === e.target.id){ // key person
+      this.paramsValue['lists'][Number(e.target.id)+1]['showTitle'] = !this.paramsValue['lists'][e.target.id].defaultShow;
+      this.paramsValue['lists'][Number(e.target.id)+1]['defaultShow'] = !this.paramsValue['lists'][e.target.id].defaultShow;
     }
     this.paramsValue['lists'][e.target.id].defaultShow = !this.paramsValue['lists'][e.target.id].defaultShow
   }

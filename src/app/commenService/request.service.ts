@@ -33,14 +33,15 @@ export class RequestService{
             this.getHandler(url,fun,this.urlName, params,);
         }
     }
-    postHandler(url:string, callfun:Function, apiName:string, params?:object, header?:object){
+    private postHandler(url:string, callfun:Function, apiName:string, params?:object, header?:object){
         if(!this.config.isDummy){
             this.http.post(url, null, params).subscribe(data=>{
-                if(data['status'] == 200){
-                    this.succesHandler(data["_body"],callfun);
-                }else {
-                    this.errorHandler(apiName,data['error']['code']);
-                }
+                // if(data['status'] == 200){
+                    this.succesHandler(data,callfun);
+                    // this.succesHandler(data["_body"],callfun);
+                // }else {
+                //     this.errorHandler(apiName,data['error']['code']);
+                // }
             })
         }else{
             var url:string = "assets" + this.config.dummyBase +""+ this.urlName+ ".json";
@@ -52,11 +53,13 @@ export class RequestService{
             url = "assets"+  this.config.dummyBase +""+ this.urlName+ ".json";
         }
         this.http.get(url, params).subscribe(data=>{
-            if(data['status'] == 200){
-                this.succesHandler(data["_body"],callfun);
-            }else{
-                this.errorHandler(apiName,data['error']['code']);
-            }
+            
+            this.succesHandler(data,callfun);
+            // if(data['status'] == 200){
+            //     this.succesHandler(data["_body"],callfun);
+            // }else{
+            //     this.errorHandler(apiName,data['error']['code']);
+            // }
         });
     }
     succesHandler(data,callFun:Function){

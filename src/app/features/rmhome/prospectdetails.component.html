@@ -6,7 +6,7 @@
                 <div class="rm-status">{{item.title}}</div>
                 <!-- <input type="text" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()"/> -->
             </div>
-            <img id={{i}} class="icon-right {{item.iconStyle}}" src="{{item.titleImgRight}}" (click)= 'toogleDownUp($event,item.defaultShow)'>
+            <img id={{i}} *ngIf="item.titleImgRight" class="icon-right {{item.iconStyle}}" src="{{item.titleImgRight}}" (click)= 'toogleDownUp($event,item.defaultShow)'>
         </div>
         <div class="items-waper" *ngIf='item.defaultShow'> 
             <items [params]='item.list'
