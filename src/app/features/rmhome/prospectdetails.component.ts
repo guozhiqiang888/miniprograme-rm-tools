@@ -50,7 +50,7 @@ export class ProspectDetailsComponent implements OnInit{
     }, function(data){
       try{
         // _this.prospectDetails = JSON.parse(data)['body'];
-        _this.prospectDetails = _this.prospectDetailsService.responseMapping(JSON.parse(data));//['body']
+        _this.prospectDetails = _this.prospectDetailsService.responseMapping(JSON.parse(data['_body']));//['body']
       }catch(e){
         console.error(e);
       }

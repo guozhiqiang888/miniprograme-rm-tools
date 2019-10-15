@@ -16,7 +16,7 @@
         "ExistingHBCNCustomer":true,
         "BMTReceiveDate":"2019-10-11",
         "CurrentFinancingStage":"unknown",
-        "CustomsInformation":"unknown"},
+        "CustomsInformation":"unknown",
         "Industry":"Medical",
         "AssigneeID":"P1234567899",
         "ConfirmedProspectLocalName":"李四",
@@ -26,3 +26,4 @@
         "DateFounded":"2019-10-11",
         "ProspectID":"P1034328433"
     }
+}
