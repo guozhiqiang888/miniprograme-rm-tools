@@ -8,7 +8,7 @@ let appRoute : Routes=[
     },
     {
         path:'prospectdetails',
-        loadChildren:"./features/rmhome/createprospect.module#CreateprospectModule"
+        loadChildren:"./features/rmhome/prospectdetails.module#ProspectDetailsModule"
     }
 ]
 export const appRouter: Routes = appRoute;

@@ -1,16 +1,10 @@
 import { Routes} from '@angular/router';
-import { CreateprospectComponent } from './createprospect.component'
+import { ProspectDetailsComponent } from './prospectdetails.component'
 import { StatusComponent } from './features/status/status.component';
 let appRoute : Routes=[
-
-    {
-        path:"createprospect",
-        component:CreateprospectComponent
-    },
-    
     {
         path:"",
-        component:CreateprospectComponent
+        component:ProspectDetailsComponent
     },
     {
         path:"status",

@@ -4,16 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {CommonModule} from '@angular/common'
 import { Routes, RouterModule } from "@angular/router"
-import { CreateprospectComponent } from './createprospect.component'
-import { createRouter } from './createprospect.router'
+import { ProspectDetailsComponent } from './prospectdetails.component'
+import { createRouter } from './prospectdetails.router'
 import { RequestService } from 'src/app/commenService/request.service';
 import { AlertModule } from 'src/components/alertbox/alert.module';
 import { ItemsModule } from 'src/components/items/items.module';
 import { StatusModule } from './features/status/status.module';
 import { CommenService } from 'src/app/services/commen.service';
+import { ProspectDetailsService } from './prospectdetails.service';
 @NgModule({
   declarations: [
-    CreateprospectComponent,
+    ProspectDetailsComponent,
   ],
   imports: [
     FormsModule,
@@ -26,9 +27,9 @@ import { CommenService } from 'src/app/services/commen.service';
   ],
   exports:[
     CommonModule,
-    CreateprospectComponent
+    ProspectDetailsComponent
   ],
-  providers: [CommenService,RequestService]
+  providers: [CommenService,RequestService,ProspectDetailsService]
 
 })
-export class CreateprospectModule { }
+export class ProspectDetailsModule { }

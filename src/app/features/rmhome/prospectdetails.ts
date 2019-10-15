@@ -54,14 +54,6 @@ export const optionsDetials ={
            {name: 'Referral event', value: '', placeholder:'Enter referral'}
        ]
      },
-    //  {
-    //    title: 'Referrer information',
-    //    iconStyle: "icon-down",
-    //    titleImg:'assets/imgs/icn_User_multiple.png',
-    //    titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
-    //    defaultShow: false,
-    //    list:[]
-    //  },
      {
        title: 'Internal information',
        iconStyle: "icon-down",
@@ -106,6 +98,7 @@ export const optionsDetials ={
        showTitle:true,
        defaultShow: false,
        list:[
+        {name: 'Comments', value: '', placeholder:'Enter comments'}
         ]
      }
   ]

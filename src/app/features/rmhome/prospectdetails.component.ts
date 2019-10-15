@@ -3,12 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { optionsDetials } from 'src/app/features/rmhome/prospectdetails';
 import { RequestService } from 'src/app/commenService/request.service';
 import { CommenService } from 'src/app/services/commen.service';
+import { ProspectDetailsService } from './prospectdetails.service';
 @Component({
-  selector: 'createprospect',
-  templateUrl: './createprospect.component.html',
-  styleUrls: ['./createprospect.component.css']
+  selector: 'prospectdetails',
+  templateUrl: './prospectdetails.component.html',
+  styleUrls: ['./prospectdetails.component.css']
 })
-export class CreateprospectComponent implements OnInit{
+export class ProspectDetailsComponent implements OnInit{
   public filtershow='';
   public btns =[];
   public hidden = 'hidden';
@@ -18,7 +19,8 @@ export class CreateprospectComponent implements OnInit{
   constructor(
     public activeRoute:ActivatedRoute,
     private requestService:RequestService,
-    public commenService:CommenService
+    public commenService:CommenService,
+    private prospectDetailsService:ProspectDetailsService
   ){
     
   }
