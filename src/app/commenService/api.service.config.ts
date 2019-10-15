@@ -17,7 +17,7 @@ export const apiServiice={
         }
     },
     prospectDetail:{
-        url: '/demo/prospect/getDetailTest/P1034328433',
+        url: '/demo/prospect/getDetailTest/{tid}',
         errots:{
             '001':'This IP address has no access',
             '002':'The signature is invalid',

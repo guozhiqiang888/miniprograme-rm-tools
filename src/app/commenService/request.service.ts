@@ -20,6 +20,10 @@ export class RequestService{
         let url =  this.config['domain'] + apiServiice[this.urlName]['url'];
         let params = options['params'];
         let header = options['header'];
+        if(undefined !== url.match(/\{[^\}]+\}/) && null !== url.match(/\{[^\}]+\}/)){
+            const replaceParams = url.match(/\{[^\}]+\}/)[0];
+            url = url.replace(url.match(/\{[^\}]+\}/)[0], params[replaceParams.substring(1,replaceParams.length-1)]);
+        }
         if(!options['method']){
             console.error(this.urlName + 'method can not be null');
         }

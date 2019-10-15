@@ -11,7 +11,7 @@
             </p>
             <input *ngIf="item.placeholder === 'Calendar'" type="text" readonly='true' class="datepickerstyle"
              ngbDatepicker #d="ngbDatepicker"
-             [(ngModel)]="date"
+             [(ngModel)]="duedate"
              (click)="d.toggle()"
              />
         </div>
