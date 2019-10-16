@@ -17,7 +17,18 @@ export const apiServiice={
         }
     },
     prospectDetail:{
-        url: '/demo/prospect/getDetailTest/P1034328433',
+        url: '/demo/prospect/getDetailTest/{tid}',
+        errots:{
+            '001':'This IP address has no access',
+            '002':'The signature is invalid',
+            '003':'Prospect ID cannot be found',
+            '004':'Mandatory field is missing',
+            '005':'Parameter is incorrect',
+            '006':'API Request failed to executed'
+        }
+    },
+    prospectContacts:{
+        url:'',
         errots:{
             '001':'This IP address has no access',
             '002':'The signature is invalid',

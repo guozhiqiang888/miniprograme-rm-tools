@@ -17,13 +17,17 @@ export class ItemsComponent implements OnInit{
     inputLength:number = 0;
     inputEnd:number = 100;
     public imgSrc = '';
-    date: NgbDate = new NgbDate(1789, 7, 14);
+    duedate:object
     constructor(private router:Router,
         private commenService:CommenService
         ){}
     ngOnInit(){
         const now = new Date();
-        this.date = new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
+        this.duedate ={
+            "year": 2019,
+            "month": 10,
+            "day": 2
+        } //new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
         console.log(this.params);
     }
     edits(index, type){

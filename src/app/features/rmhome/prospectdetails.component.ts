@@ -25,7 +25,8 @@ export class ProspectDetailsComponent implements OnInit{
     
   }
   ngOnInit(){
-    this.paramsValue= optionsDetials; //JSON.parse(this.activeRoute.queryParams['value']['params']);
+    this.paramsValue= optionsDetials; 
+    
     let hash = window.location.hash;
     if(hash.includes('details')){
       this.btns=[
@@ -46,7 +47,9 @@ export class ProspectDetailsComponent implements OnInit{
     this.requestService.requestGSP({
       requestName:"prospectDetail",
       method:"get",
-      params:{}
+      params:{
+        tid:this.activeRoute.queryParams['value'].tid
+      }
     }, function(data){
       try{
         // _this.prospectDetails = JSON.parse(data)['body'];
@@ -65,9 +68,20 @@ export class ProspectDetailsComponent implements OnInit{
     }else{
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_up_thick.png'
     }
-    if('2' === e.target.id){ // key person
-      this.paramsValue['lists'][Number(e.target.id)+1]['showTitle'] = !this.paramsValue['lists'][e.target.id].defaultShow;
-      this.paramsValue['lists'][Number(e.target.id)+1]['defaultShow'] = !this.paramsValue['lists'][e.target.id].defaultShow;
+    switch(e.target.id){
+      case '1':
+
+        break;
+      case '2':
+          this.paramsValue['lists'][Number(e.target.id)+1]['showTitle'] = !this.paramsValue['lists'][e.target.id].defaultShow;
+          this.paramsValue['lists'][Number(e.target.id)+1]['defaultShow'] = !this.paramsValue['lists'][e.target.id].defaultShow;
+        break;
+      case '3':
+        break;
+      case '4':
+        break;
+      default:
+        
     }
     this.paramsValue['lists'][e.target.id].defaultShow = !this.paramsValue['lists'][e.target.id].defaultShow
   }
