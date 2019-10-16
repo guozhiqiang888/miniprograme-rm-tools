@@ -9,7 +9,8 @@
             <p *ngIf="item.value=='' && item.placeholder !== 'Calendar'">
                 {{item.placeholder}}
             </p>
-            <input *ngIf="item.placeholder === 'Calendar'" type="date" 
+            <input *ngIf="item.placeholder === 'Calendar'" type="date" class="datepickerstyle"
+             
              />
         </div>
         <input *ngIf="!item.imgSrc" type="text" placeholder="{{item.value ==''? item.placeholder : '' }}" value="{{item.value ==''? '' : item.value }}" 

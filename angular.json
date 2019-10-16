@@ -24,14 +24,10 @@
             "styles": [
               "src/styles.css",
               "src/assets/resource/bootstrap-theme.min.css",
-              "src/assets/css/mui.min.css",
-              "src/assets/css/mui.picker.min.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "src/assets/js/jquery-3.4.1.min.js",
-              "src/assets/js/mui.min.js",
-              "src/assets/js/mui.picker.min.js",
               
               "node_modules/echarts/dist/echarts.min.js",
               "src/assets/js/bootstrap.min.js",
