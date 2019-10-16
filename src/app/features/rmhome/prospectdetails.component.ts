@@ -41,7 +41,6 @@ export class ProspectDetailsComponent implements OnInit{
     this.commenService.currentSelected(this.paramsValue);
     this.getProspectDetail();
   }
-
   getProspectDetail(){
     const _this = this;
     this.requestService.requestGSP({

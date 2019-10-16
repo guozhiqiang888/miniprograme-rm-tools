@@ -9,10 +9,7 @@
             <p *ngIf="item.value=='' && item.placeholder !== 'Calendar'">
                 {{item.placeholder}}
             </p>
-            <input *ngIf="item.placeholder === 'Calendar'" type="text" readonly='true' class="datepickerstyle"
-             ngbDatepicker #d="ngbDatepicker"
-             [(ngModel)]="duedate"
-             (click)="d.toggle()"
+            <input *ngIf="item.placeholder === 'Calendar'" type="date" 
              />
         </div>
         <input *ngIf="!item.imgSrc" type="text" placeholder="{{item.value ==''? item.placeholder : '' }}" value="{{item.value ==''? '' : item.value }}" 
@@ -22,20 +19,4 @@
             <img class="{{item.iconStyle}}" src="{{item.imgSrc}}" (click)= "edits(i, item.iconStyle)">
         </div>
     </div>
-    <!-- <div *ngIf="item.child" style="width: 100%">
-        <div class="content-header">
-            <div class="img-waper">
-                <img class="img-icon" src="{{item.imgSrc}}">
-                <div class="rm-status">{{item.child}}</div>
-            </div>
-            <img id={{i}} class="icon-right {{item.iconStyle}}" src="{{item.iconRight}}" (click)= 'toogleDownUp($event,item.defaultShow)'>
-        </div>
-        <div class="items-waper" *ngIf='item.defaultShow'> 
-            <div *ngFor = 'let child of item.list; let childIndex = index' class="childlist">
-                <div class="list-title">{{child.name}}</div>
-                <input type="text" placeholder="{{child.value ==''? child.placeholder : '' }}" value="{{child.value ==''? '' : child.value }}" 
-                class="list-warning" [ngStyle]=" {'width': item.name=='Comments'? '100%': '95%'}" (input) = "inputEvent(item.name,$event)">
-            </div>
-        </div>
-    </div> -->
 </div>
