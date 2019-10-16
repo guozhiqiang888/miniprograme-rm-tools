@@ -2,7 +2,7 @@ import { Component , Input, OnInit} from '@angular/core'
 import { Router } from '@angular/router';
 import { editsConfig} from '../../assets/dummy/edits'
 import { CommenService } from '../../app/services/commen.service'
-import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date';
+// import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date';
 
 @Component({
     selector: 'items',
@@ -17,17 +17,20 @@ export class ItemsComponent implements OnInit{
     inputLength:number = 0;
     inputEnd:number = 100;
     public imgSrc = '';
+    day:string;
     duedate:object
     constructor(private router:Router,
         private commenService:CommenService
         ){}
     ngOnInit(){
         const now = new Date();
-        this.duedate ={
-            "year": 2019,
-            "month": 10,
-            "day": 2
-        } //new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
+        // this.duedate ={
+        //     "year": 2019,
+        //     "month": 10,
+        //     "day": 2
+        //} //new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
+        let date = new Date();
+        this.day = date.getMonth()+1+"/"+ date.getDate()+ "/" +date.getFullYear();
         console.log(this.params);
     }
     edits(index, type){
