@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+// import { FormsModule } from '@angular/forms';
+// import { HttpModule } from '@angular/http';
 // import { CreateprospectModule } from './features/createprospect/createprospect.module';
 import { CommonModule } from '@angular/common';
 import { AlertComponent } from './alert.component';
@@ -11,9 +11,7 @@ import { AlertComponent } from './alert.component';
       AlertComponent
   ],
   imports: [
-    CommonModule,
-    FormsModule,
-    HttpModule
+    CommonModule
   ],
   exports:[AlertComponent],
   providers: []

@@ -1,9 +1,7 @@
 
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import {CommonModule} from '@angular/common'
-import { Routes, RouterModule } from "@angular/router"
+import {CommonModule} from '@angular/common';
+import { RouterModule } from "@angular/router";
 import { ProspectDetailsComponent } from './prospectdetails.component'
 import { createRouter } from './prospectdetails.router'
 import { RequestService } from 'src/app/commenService/request.service';
@@ -17,8 +15,6 @@ import { ProspectDetailsService } from './prospectdetails.service';
     ProspectDetailsComponent,
   ],
   imports: [
-    FormsModule,
-    HttpModule,
     CommonModule,
     ItemsModule,
     AlertModule,

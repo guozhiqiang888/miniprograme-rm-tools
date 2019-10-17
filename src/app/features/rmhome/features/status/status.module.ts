@@ -1,11 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import {CommonModule} from '@angular/common'
 import { RouterModule } from '@angular/router';
-import { statusRouter} from './status.router'
-import { StatusComponent } from './status.component'
+import { statusRouter} from './status.router';
+import { StatusComponent } from './status.component';
 // import { HeaderlistComponent } from '../../../../../components/headerlist/headerlist.component'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { TranslateModule,TranslateLoader } from '@ngx-translate/core'
@@ -19,8 +16,6 @@ export function HttpLoaderFactory(httpClient:HttpClient){
     StatusComponent
   ],
   imports: [
-    FormsModule,
-    HttpModule,
     CommonModule,
     HttpClientModule,
     TranslateModule.forRoot({

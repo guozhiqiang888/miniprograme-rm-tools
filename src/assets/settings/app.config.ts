@@ -1,6 +1,6 @@
 export const appConfig={
-    domain:'http://39.98.183.95:9080',
+    domain:'https://www.farben.club:12880',
     local:'en',
-    isDummy: true,
+    isDummy: false,
     dummyBase:"/dummy/dummydata/"
 }
