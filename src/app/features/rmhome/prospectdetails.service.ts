@@ -17,7 +17,7 @@ export class ProspectDetailsService{
         let internalInformation = responseBody['InternalInformation']
         _.forEach(data ,(item, index)=> {
             let mappingKey = this.mappingTitle(item['title'])
-            _.forEach(item['list'], (child, index)=> {
+            _.forEach(item['list'], (child, childIndex)=> {
                 if(child['mapping']!=''){
                     let responsekey = detailsListMapping[mappingKey][child['mapping']];
                     if(responsekey.includes('InternalInformation')){
@@ -31,6 +31,7 @@ export class ProspectDetailsService{
                 }else{
                     child['value'] = "unk"
                 }
+                child['itemIndex'] = childIndex;
             })
         }); 
         return data;

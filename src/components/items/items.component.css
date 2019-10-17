@@ -23,7 +23,7 @@ p{
     margin: 0px;
 }
 input[type='date'].datepicker::before{
-    content: attr(placeholder);
+    content: attr(placeholder,'asdfsd');
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

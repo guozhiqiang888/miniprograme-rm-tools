@@ -33,12 +33,11 @@ export class ItemsComponent implements OnInit{
         this.day = date.getMonth()+1+"/"+ date.getDate()+ "/" +date.getFullYear();
         console.log(this.params);
     }
-    edits(index, type){
-        let eventType = type.split('-')[1];
-        let itemParams =this.params[index];
+    edits(item){
+        let itemParams =this.params;
         let editParams=[];
         console.log('edits params' + JSON.stringify(itemParams));
-        switch(index){
+        switch(item.itemIndex){
             case 0:
                 editParams = editsConfig.RMS;
                 this.commenService.setLocStorage('type', 'RM');
@@ -47,7 +46,7 @@ export class ItemsComponent implements OnInit{
                 editParams = editsConfig.STATUS;
                 this.commenService.setLocStorage('type', 'STATUS');
             break;
-            case 3:
+            case 4:
                 editParams = editsConfig.PRIORITY;
                 this.commenService.setLocStorage('type', 'PRIORITY');
                 break;

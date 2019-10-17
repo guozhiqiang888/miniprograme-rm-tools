@@ -4,14 +4,13 @@
             <div class="img-waper">
                 <img class="img-icon" src="{{item.titleImg}}">
                 <div class="rm-status">{{item.title}}</div>
-                <!-- <input type="text" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()"/> -->
             </div>
             <img id={{i}} *ngIf="item.titleImgRight" class="icon-right {{item.iconStyle}}" src="{{item.titleImgRight}}" (click)= 'toogleDownUp($event,item.defaultShow)'>
         </div>
         <div class="items-waper" *ngIf='item.defaultShow'> 
-            <items [params]='item.list'
-            [pageParams] ='pageParams'
-            ></items>
+            <div *ngFor="let child of item.list, let i=index">
+                <items [params]= 'child' *ngIf="child.value!=''"></items>
+            </div>
         </div>
     </div>
     <div class="content-header-add">
