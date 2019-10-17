@@ -25,6 +25,25 @@ p{
 input[type='date'].datepicker::before{
     content: attr(placeholder);
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+ }
+  
+ input[type="date"]::-webkit-inner-spin-button {
+     display: none;
+     }
+  
+ input[type="date"]::-webkit-clear-button{
+    display:none;
+ } 
+ input[type="date"]::-webkit-datetime-edit{
+     color: #333333;
+     font-family: "SF Pro Text";
+     font-size: 16px;
+     font-weight: 500;
+     letter-spacing: -0.32px;
+ }
 .datepickerstyle{
     height: 30px;
     width: 100%;
@@ -34,6 +53,7 @@ input[type='date'].datepicker::before{
     font-size: 16px;	
     font-weight: 500;	
     border: none;
+    background-color: #fff;
     letter-spacing: -0.32px;
     background-position: center;
     background-repeat: no-repeat;
