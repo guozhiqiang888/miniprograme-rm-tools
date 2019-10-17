@@ -26,7 +26,7 @@ input[type='date'].datepicker::before{
     content: attr(placeholder,'asdfsd');
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+/* input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
  }
   
@@ -36,7 +36,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   
  input[type="date"]::-webkit-clear-button{
     display:none;
- } 
+ }  */
  input[type="date"]::-webkit-datetime-edit{
      color: #333333;
      font-family: "SF Pro Text";

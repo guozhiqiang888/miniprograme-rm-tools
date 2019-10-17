@@ -30,33 +30,8 @@ export const optionsDetials ={
             {name:'Phone', mapping:'Phone',  value:'',editAble:false,placeholder:'Enter here'},
             {name:'Website', mapping:'Website', value:'',editAble:false, placeholder:'Enter here'},
        ]
-    },
-    {
+    },{  
       listIndex:'1',
-       title:"Contact information",
-       iconStyle: "icon-down",
-       titleImg:'assets/imgs/icn_User_staff.png',
-       titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
-       showTitle:true,
-       defaultShow: false,
-       list:[
-           {name:'Chinese name', mapping:'chineseName',editAble:false, value:'', placeholder:'Enter here'},
-           {name: 'English name', mapping: 'englishName',editAble:false, value:'', placeholder:'Enter here'},
-           {name: 'Personal title', mapping: 'personalTitle',editAble:false, value:'', placeholder:'Enter here'},
-           {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter here'},
-           {name: 'Primary contact number',editAble:false, mapping: 'primaryNumber',  value:'',placeholder:'Enter here'},
-           {name: 'Secondary contact number', mapping: 'secondNumber',editAble:false,  value:'',placeholder:'Enter here'},
-           {name: 'Primary email address', mapping: 'primaryEmail',editAble:false, value:'', placeholder:'Enter here'},
-           {name: 'Secondary enail address', mapping: 'secondEmail',editAble:false, value:'', placeholder:'Enter here'},
-           {name: 'Contact address', mapping: 'contactAddress',editAble:false,  value:'',placeholder:'Enter here'},
-           {name: 'Contact country', mapping: 'contactCountry',editAble:false, value:'', placeholder:'Enter country'},
-           {name: 'Contact province', mapping: 'contactProvience',editAble:false, value:'', placeholder:'Enter province'},
-           {name: 'HUB customer code', mapping: 'hubCode', editAble:false,value:'', placeholder:'Enter code'},
-           {name: 'Referral event', mapping: 'referralEvent',editAble:false, value:'', placeholder:'Enter referral'}
-       ]
-     },
-     {  
-      listIndex:'2',
        title: 'Internal information',
        iconStyle: "icon-down",
        titleImg:'assets/imgs/icn_Account.png',
@@ -93,7 +68,32 @@ export const optionsDetials ={
         {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter Gender'},
         {name: 'City', mapping: 'city',editAble:false, value:'', placeholder:'Enter city'}
       ]
-    },{
+    },
+    {
+      listIndex:'3',
+       title:"Primary Contact",
+       iconStyle: "icon-down",
+       titleImg:'assets/imgs/icn_User_staff.png',
+       titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
+       showTitle:true,
+       defaultShow: false,
+       list:[
+           {name:'Chinese name', mapping:'chineseName',editAble:false, value:'', placeholder:'Enter here'},
+           {name: 'English name', mapping: 'englishName',editAble:false, value:'', placeholder:'Enter here'},
+           {name: 'Personal title', mapping: 'personalTitle',editAble:false, value:'', placeholder:'Enter here'},
+           {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter here'},
+           {name: 'Primary contact number',editAble:false, mapping: 'primaryNumber',  value:'',placeholder:'Enter here'},
+           {name: 'Secondary contact number', mapping: 'secondNumber',editAble:false,  value:'',placeholder:'Enter here'},
+           {name: 'Primary email address', mapping: 'primaryEmail',editAble:false, value:'', placeholder:'Enter here'},
+           {name: 'Secondary enail address', mapping: 'secondEmail',editAble:false, value:'', placeholder:'Enter here'},
+           {name: 'Contact address', mapping: 'contactAddress',editAble:false,  value:'',placeholder:'Enter here'},
+           {name: 'Contact country', mapping: 'contactCountry',editAble:false, value:'', placeholder:'Enter country'},
+           {name: 'Contact province', mapping: 'contactProvience',editAble:false, value:'', placeholder:'Enter province'},
+           {name: 'HUB customer code', mapping: 'hubCode', editAble:false,value:'', placeholder:'Enter code'},
+           {name: 'Referral event', mapping: 'referralEvent',editAble:false, value:'', placeholder:'Enter referral'}
+       ]
+     },
+     {
       listIndex:'4',
        title: 'Activity',
        iconStyle: "icon-down",

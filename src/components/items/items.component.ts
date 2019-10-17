@@ -1,8 +1,6 @@
 import { Component , Input, OnInit} from '@angular/core'
 import { Router } from '@angular/router';
-// import { editsConfig} from '../../app/features/rmhome/features/status/edits'
 import { CommenService } from '../../app/services/commen.service'
-// import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date';
 
 @Component({
     selector: 'items',
@@ -31,6 +29,10 @@ export class ItemsComponent implements OnInit{
         //} //new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
         let date = new Date();
         this.day = date.getMonth()+1+"/"+ date.getDate()+ "/" +date.getFullYear();
+    }
+    dateChange(){
+        console.log(this.day);
+        
     }
     edits(item){
         let itemParams =this.params;

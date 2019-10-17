@@ -56,21 +56,20 @@ export class ProspectDetailsComponent implements OnInit{
     }else{
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_up_thick.png'
     }
-    switch(e.target.id){
-      case '1':
+    // switch(e.target.id){
+    //   case '1':
 
-        break;
-      case '2':
-          this.paramsValue['lists'][Number(e.target.id)+1]['showTitle'] = !this.paramsValue['lists'][e.target.id].defaultShow;
-          this.paramsValue['lists'][Number(e.target.id)+1]['defaultShow'] = !this.paramsValue['lists'][e.target.id].defaultShow;
-        break;
-      case '3':
-        break;
-      case '4':
-        break;
-      default:
+    //     break;
+    //   case '2':,
+    //       this.paramsValue['lists'][Number(e.target.id)+1]['defaultShow'] = !this.paramsValue['lists'][e.target.id].defaultShow;
+    //     break;
+    //   case '3':
+    //     break;
+    //   case '4':
+    //     break;
+    //   default:
         
-    }
+    // }
     this.paramsValue['lists'][e.target.id].defaultShow = !this.paramsValue['lists'][e.target.id].defaultShow
   }
   submit(){
