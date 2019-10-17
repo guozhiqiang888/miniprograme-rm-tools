@@ -39,4 +39,11 @@ export class ProspectDetailsService{
     mappingTitle(title:string){
         return title.includes('status')?'status': title.includes('Contact')?'contactInformation': title.includes('Internal')?'InternalInformation':title.includes('Key')?'keyPerson':'';
     }
+    buttonsMapping(hash:string){
+        if(hash.includes('details')){
+            return this.detailsList['buttons']['details']
+        }else if(hash.includes('create')){
+            return this.detailsList['buttons']['create']
+        }
+    }
 }

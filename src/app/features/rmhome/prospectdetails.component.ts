@@ -26,18 +26,8 @@ export class ProspectDetailsComponent implements OnInit{
   }
   ngOnInit(){
     this.paramsValue= optionsDetials; 
-    
     let hash = window.location.hash;
-    if(hash.includes('details')){
-      this.btns=[
-        {title:'Update prospect', enable:''},
-        {title:'Reject prospect', enable:''}
-      ]
-    }else if(hash.includes('create')){
-      this.btns=[
-        {title:'Create prospect'}
-      ]
-    }
+    this.btns = this.prospectDetailsService.buttonsMapping(hash);
     this.commenService.currentSelected(this.paramsValue);
     this.getProspectDetail();
   }
@@ -56,7 +46,6 @@ export class ProspectDetailsComponent implements OnInit{
       }catch(e){
         console.error(e);
       }
-      console.log(_this.prospectDetails);
     });
   }
 

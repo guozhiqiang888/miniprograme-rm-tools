@@ -1,6 +1,6 @@
 import { Component , Input, OnInit} from '@angular/core'
 import { Router } from '@angular/router';
-import { editsConfig} from '../../assets/dummy/edits'
+// import { editsConfig} from '../../app/features/rmhome/features/status/edits'
 import { CommenService } from '../../app/services/commen.service'
 // import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date';
 
@@ -31,27 +31,22 @@ export class ItemsComponent implements OnInit{
         //} //new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
         let date = new Date();
         this.day = date.getMonth()+1+"/"+ date.getDate()+ "/" +date.getFullYear();
-        console.log(this.params);
     }
     edits(item){
         let itemParams =this.params;
         let editParams=[];
-        console.log('edits params' + JSON.stringify(itemParams));
         switch(item.itemIndex){
             case 0:
-                editParams = editsConfig.RMS;
-                this.commenService.setLocStorage('type', 'RM');
+                this.commenService.setLocStorage('type', 'RMS');
             break;
             case 1:
-                editParams = editsConfig.STATUS;
                 this.commenService.setLocStorage('type', 'STATUS');
             break;
             case 4:
-                editParams = editsConfig.PRIORITY;
                 this.commenService.setLocStorage('type', 'PRIORITY');
                 break;
         }
-        this.router.navigate(['/prospectdetails/status'],{queryParams:{value:JSON.stringify(editParams)}});
+        this.router.navigate(['/prospectdetails/status'],{queryParams:{value:JSON.stringify(item)}});
     }
     inputEvent(itemName,event){
         if('Comments' == itemName){

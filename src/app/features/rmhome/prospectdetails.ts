@@ -105,5 +105,14 @@ export const optionsDetials ={
         {name: 'Comments', mapping: '', editAble:true,value:'', placeholder:'Enter  comments'}
         ]
      }
-  ]
+  ],
+  buttons:{
+    details:[
+      {title:'Update prospect', enable:''},
+      {title:'Reject prospect', enable:''}
+    ],
+    create:[
+      {title:'Create prospect'}
+    ]
+  }
 }

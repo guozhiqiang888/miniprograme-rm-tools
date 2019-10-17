@@ -13,6 +13,8 @@ export class CommenService{
         return result;
     }
     getParamsValue(){
+        console.log(this.activeRoute.snapshot.queryParams['value']);
+        
         return this.activeRoute.snapshot.queryParams['value']
     }
     setLocStorage(key:string, value:string){

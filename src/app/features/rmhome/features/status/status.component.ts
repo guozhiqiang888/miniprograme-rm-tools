@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommenService } from '../../../../services/commen.service'
 import { TranslateService } from '@ngx-translate/core';
+import { editsConfig } from './edits';
 
 declare let wx:any;
 @Component({
@@ -32,10 +33,9 @@ export class StatusComponent implements OnInit{
   ngOnInit(){
     try{
       this.btnDisable='disabled';
-      let params= this.commenService.getParamsValue();
-      this.list = JSON.parse(params);
-      this.currentSelected = this.commenService.currentSelected(this.list);
       let type = this.commenService.getLocStorage('type');
+      this.list = editsConfig[type];
+      this.currentSelected = this.commenService.currentSelected(this.list);
       
     }catch(e){
       console.error('JSON parse error on statusComponent');
