@@ -20,8 +20,8 @@ input[type="radio"]+i::before{
     display: inline-block;
     vertical-align: middle;
     font-size: 14px;
-    width: 1em;
-    height: 1em;
+    width: 1.4em;
+    height: 1.4em;
     border-radius: 50%;
     text-indent: .15em;
     padding: .2em;
