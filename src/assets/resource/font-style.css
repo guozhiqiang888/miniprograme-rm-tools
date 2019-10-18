@@ -91,5 +91,9 @@
     font-weight: bold;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'PingFang SC';
+    src: url('./font/PingFangSC.ttf');
+    font-style: normal;
+}
 
