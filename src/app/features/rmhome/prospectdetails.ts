@@ -17,7 +17,7 @@ export const optionsDetials ={
             imgSrc:'assets/imgs/icn_Calendar.png', mapping: 'dueDate', value:'', placeholder:'Calendar'},
             {name: 'Expected conversion date', iconStyle:'list-icon',editAble:false,
             imgSrc:'assets/imgs/icn_Calendar.png', mapping: 'expectDate', value:'', placeholder:'Calendar'},
-            {name: 'Proiority', iconStyle:'icon-right',editAble:true,
+            {name: 'Priority', iconStyle:'icon-right',editAble:true,
             imgSrc:'assets/imgs/icn_chevron_right_thick.png', mapping: 'priority', value:'', placeholder:'Select Priority'},
 
             {name:'Local name', mapping:'localName',editAble:false, value:'',placeholder:'Enter here'},
