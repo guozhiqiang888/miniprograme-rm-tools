@@ -9,11 +9,11 @@
         </div>
         <div class="items-waper" *ngIf='item.defaultShow'> 
             <div *ngFor="let child of item.list, let i=index">
-                <items [params]= 'child' *ngIf="child.value!=''"></items>
+                <items [params]= 'child' *ngIf="child.value!='' || child.name === 'Comments'"></items>
             </div>
         </div>
     </div>
-    <div class="content-header-add">
+    <div class="content-header-add hidden">
         <img class="img-icon" src="assets/imgs/icn_Add.png">
         <div class="rm-status">Add another contact</div>
     </div>

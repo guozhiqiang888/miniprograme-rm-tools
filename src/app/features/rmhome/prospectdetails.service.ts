@@ -28,8 +28,9 @@ export class ProspectDetailsService{
                             child['value'] = responseBody[detailsListMapping[mappingKey][child['mapping']]]
                         }
                     }
-                }else{
-                    child['value'] = "unk"
+                }
+                else{
+                    child['value'] = ""
                 }
                 child['itemIndex'] = childIndex;
             })
@@ -37,11 +38,11 @@ export class ProspectDetailsService{
         return data;
     } 
     mappingTitle(title:string){
-        return title.includes('status')?'status': title.includes('Contact')?'contactInformation': title.includes('Internal')?'InternalInformation':title.includes('Key')?'keyPerson':'';
+        return title.includes('General')?'status': title.includes('Contact')?'contactInformation': title.includes('Internal')?'InternalInformation':title.includes('Key')?'keyPerson':'';
     }
     buttonsMapping(hash:string){
         if(hash.includes('details')){
-            return this.detailsList['buttons']['details']
+            return this.detailsList['buttons']['detailsShow']
         }else if(hash.includes('create')){
             return this.detailsList['buttons']['create']
         }

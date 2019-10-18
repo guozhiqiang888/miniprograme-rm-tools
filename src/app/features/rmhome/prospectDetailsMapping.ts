@@ -5,8 +5,8 @@ export const detailsListMapping= {
         dueDate:"DueDate",
         expectDate:"DateFounded",
         priority:"Priority",
-        localName:"LocalName",
-        englishName:"EnglishName",
+        localComponentName:"InternalInformation.AnchorCompanyLocalName",
+        englishComponentName:"InternalInformation.AnchorCompanyEnglishName",
         ID:"AssigneeID",
         Salesrevenue:"SalesRevenue",
         RegisteredCapital:"",
@@ -43,7 +43,8 @@ export const detailsListMapping= {
         overseasInverstmentEnterprises:"InternalInformation.OverseaInvestemtEnterprise",
         currentFinancingStage:"InternalInformation.CurrentFinancingStage",
         keyProduceName:"InternalInformation.KeyProductName",
-        hubCode:"InternalInformation.HUBCustomerCode"
+        hubCode:"InternalInformation.HUBCustomerCode",
+        dateFounded:"DateFounded"
     },
     keyPerson:{
         localName:"",

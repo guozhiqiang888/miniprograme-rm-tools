@@ -2,8 +2,8 @@ export const optionsDetials ={
   prespectName:'',
   lists:[
    {   listIndex:'0',
-       title:"RM status",
-       titleImg:'assets/imgs/icn_User.png',
+       title:"General infromation",
+       titleImg:'assets/imgs/icn_portfolio.png',
        titleImgRight:'',
        showTitle:true,
        defaultShow: true,
@@ -20,8 +20,8 @@ export const optionsDetials ={
             {name: 'Priority', iconStyle:'icon-right',editAble:true,
             imgSrc:'assets/imgs/icn_chevron_right_thick.png', mapping: 'priority', value:'', placeholder:'Select Priority'},
 
-            {name:'Local name', mapping:'localName',editAble:false, value:'',placeholder:'Enter here'},
-            {name:'English name', mapping:'englishName',editAble:false, value:'', placeholder:'Enter here'},
+            {name:'Local name', mapping:'localComponentName',editAble:false, value:'',placeholder:'Enter here'},
+            {name:'English name', mapping:'englishComponentName',editAble:false, value:'', placeholder:'Enter here'},
             {name:'ID', mapping:'ID', editAble:false,value:'', placeholder:'Enter here'},
             {name:'Sales revenue', editAble:false,mapping:'Salesrevenue', value:'', placeholder:'Enter here'},
             {name:'Registered Capital', mapping:'RegisteredCapital', editAble:false,value:'', placeholder:'Enter here'},
@@ -42,16 +42,17 @@ export const optionsDetials ={
           {name: 'Financing info', mapping: 'financingInfo',editAble:false, value:'', placeholder:'Enter info'},
           {name: 'Customs info', mapping: 'customInfo',editAble:false, value:'', placeholder:'Enter info'},
           {name: 'Registration type', mapping: 'registrationType',editAble:false, value:'', placeholder:'Enter type'},
-          {name: 'is existion AMH customer', mapping: 'isAMHcustomer',editAble:false, value:'', placeholder:'Enter referral'},
+          {name: 'Is existing AMH customer', mapping: 'isAMHcustomer',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor company relationship', mapping: 'anchorRelationship',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor company local name', mapping: 'anchorLocalName',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor company english name', mapping: 'anchorEnglishName',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor RM', mapping: 'anchorRM',editAble:false, value:'', placeholder:'Enter referral'},
-          {name: 'Existion customer segment', mapping: 'extCustomerSegment', editAble:false,value:'', placeholder:'Enter referral'},
+          {name: 'Existing customer segment', mapping: 'extCustomerSegment', editAble:false,value:'', placeholder:'Enter referral'},
           {name: 'Overseas inverstment enterprises', mapping: 'overseasInverstmentEnterprises',editAble:false,  value:'',placeholder:'Enter referral'},
           {name: 'Current financing stage', mapping: 'currentFinancingStage',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Key product name', mapping: 'keyProduceName',editAble:false,  value:'',placeholder:'Enter referral'},
-          {name: 'HUB customer code', mapping: 'hubCode',editAble:false, value:'', placeholder:'Enter referral'}
+          {name: 'HUB customer code', mapping: 'hubCode',editAble:false, value:'', placeholder:'Enter referral'},
+          {name: 'Date founded', mapping: 'dateFounded',editAble:false, value:'', placeholder:'Enter referral'}
         ]
      },{
       listIndex:'3',
@@ -102,7 +103,10 @@ export const optionsDetials ={
        showTitle:true,
        defaultShow: false,
        list:[
-        {name: 'Comments', mapping: '', editAble:true,value:'', placeholder:'Enter  comments'}
+        {name: 'Comments', mapping: '', editAble:true,value:'', placeholder:'Enter comments', 
+          buttons:[
+            {title:"Send", enable:""}
+          ]}
         ]
      }
   ],
@@ -110,6 +114,10 @@ export const optionsDetials ={
     details:[
       {title:'Update prospect', enable:''},
       {title:'Reject prospect', enable:''}
+    ],
+    detailsShow:[
+      {title:'Update contact information', enable:''},
+      {title:'Edit HUB customer code', enable:''}
     ],
     create:[
       {title:'Create prospect'}

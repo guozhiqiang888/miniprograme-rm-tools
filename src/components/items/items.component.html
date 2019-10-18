@@ -1,18 +1,28 @@
+<div>
+    <div class="content-list">
+        <div class="list-msg" *ngIf="params.name">
+            <div class="list-title">{{params.name}}</div>
+            <div class="list-warning" *ngIf='params.imgSrc' [ngClass] = "{'calender-list': params.placeholder == 'Calendar'}">
+                <p *ngIf="params.value!='' && params.placeholder !== 'Calendar'">
+                    {{params.value}}
+                </p>
+                <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' required="required" [(ngModel)]="day" type="date" class="datepickerstyle" value="2019-10-18"/>
+            </div>
+            <input *ngIf="!params.imgSrc && params.name!=='Comments'" type="text" readonly=true value="{{params.value ==''? '' : params.value }}" 
+            class="list-warning">
 
-<div class="content-list">
-    <div class="list-msg" *ngIf="params.name">
-        <div class="list-title">{{params.name}}</div>
-        <div class="list-warning" *ngIf='params.imgSrc' [ngClass] = "{'calender-list': params.placeholder == 'Calendar'}">
-            <p *ngIf="params.value!='' && params.placeholder !== 'Calendar'">
-                {{params.value}}
-            </p>
-            <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' required="required" [(ngModel)]="day" type="date" class="datepickerstyle" value="2019-10-18"/>
+            <input *ngIf="!params.imgSrc && params.name =='Comments'" maxlength="100" type="text" placeholder="{{params.placeholder}}" value="{{params.value ==''?'' : params.value }}" 
+            class="list-warning" [ngStyle]=" {'width': params.name=='Comments'? '100%': '90%'}" (input) = "inputEvent(params.name,$event)">
+            <div *ngIf="params.name=='Comments'" class="commer-font">{{inputLength}}/{{inputEnd}}</div>
         </div>
-        <input *ngIf="!params.imgSrc" type="text" readonly=true value="{{params.value ==''? '' : params.value }}" 
-        class="list-warning" [ngStyle]=" {'width': params.name=='Comments'? '100%': '90%'}" (input) = "inputEvent(params.name,$event)">
-        <div *ngIf="params.name=='Comments'" class="commer-font">{{inputLength}}/{{inputEnd}}</div>
-        <div class="list-icon" *ngIf="params.imgSrc && params.placeholder !== 'Calendar'">
-            <img class="{{params.iconStyle}}" src="{{params.imgSrc}}" (click)='edits(params)'>
+    </div>
+    <div class="connents" *ngIf="params.name==='Comments'">
+        <div style="padding: 16px 0px;">
+            <input class="buttons disable" [ngClass]= "{'enable': inputLength>0}" *ngFor="let btn of params.buttons" type="button" value="{{btn.title}}"/>
+        </div>
+        <div class="msghistory">
+            <div class="msg">Johnny Li modified the priority from "Low" to "High"</div>
+            <div class="msgdate">13:28 2 JUL 2019</div>
         </div>
     </div>
 </div>
