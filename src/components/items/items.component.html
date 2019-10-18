@@ -6,7 +6,7 @@
             <p *ngIf="params.value!='' && params.placeholder !== 'Calendar'">
                 {{params.value}}
             </p>
-            <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' required="required" [(ngModel)]="day" type="date" class="datepickerstyle" value="{{params.value}}"/>
+            <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' required="required" [(ngModel)]="day" type="date" class="datepickerstyle" value="2019-10-18"/>
         </div>
         <input *ngIf="!params.imgSrc" type="text" readonly=true value="{{params.value ==''? '' : params.value }}" 
         class="list-warning" [ngStyle]=" {'width': params.name=='Comments'? '100%': '90%'}" (input) = "inputEvent(params.name,$event)">
