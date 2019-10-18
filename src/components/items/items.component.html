@@ -1,5 +1,5 @@
 <div>
-    <div class="content-list">
+    <div class="content-list" [ngStyle]="{'margin-top': params.placeholder =='local'? '24px':''}">
         <div class="list-msg" *ngIf="params.name">
             <div class="list-title">{{params.name}}</div>
             <div class="list-warning" *ngIf='params.imgSrc' [ngClass] = "{'calender-list': params.placeholder == 'Calendar'}">
@@ -9,11 +9,14 @@
                 <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' required="required" [(ngModel)]="day" type="date" class="datepickerstyle" value="2019-10-18"/>
             </div>
             <input *ngIf="!params.imgSrc && params.name!=='Comments'" type="text" readonly=true value="{{params.value ==''? '' : params.value }}" 
-            class="list-warning">
+            class="list-warning" style="width: 100%;">
 
             <input *ngIf="!params.imgSrc && params.name =='Comments'" maxlength="100" type="text" placeholder="{{params.placeholder}}" value="{{params.value ==''?'' : params.value }}" 
             class="list-warning" [ngStyle]=" {'width': params.name=='Comments'? '100%': '90%'}" (input) = "inputEvent(params.name,$event)">
             <div *ngIf="params.name=='Comments'" class="commer-font">{{inputLength}}/{{inputEnd}}</div>
+            <div class="list-icon" *ngIf="params.imgSrc && params.placeholder !== 'Calendar'">
+                <img class="{{params.iconStyle}}" src="{{params.imgSrc}}" (click)='edits(params)'>
+            </div>
         </div>
     </div>
     <div class="connents" *ngIf="params.name==='Comments'">

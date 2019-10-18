@@ -20,7 +20,7 @@ export const optionsDetials ={
             {name: 'Priority', iconStyle:'icon-right',editAble:true,
             imgSrc:'assets/imgs/icn_chevron_right_thick.png', mapping: 'priority', value:'', placeholder:'Select Priority'},
 
-            {name:'Local name', mapping:'localComponentName',editAble:false, value:'',placeholder:'Enter here'},
+            {name:'Local name', mapping:'localComponentName',editAble:false, value:'',placeholder:'local'},
             {name:'English name', mapping:'englishComponentName',editAble:false, value:'', placeholder:'Enter here'},
             {name:'ID', mapping:'ID', editAble:false,value:'', placeholder:'Enter here'},
             {name:'Sales revenue', editAble:false,mapping:'Salesrevenue', value:'', placeholder:'Enter here'},
