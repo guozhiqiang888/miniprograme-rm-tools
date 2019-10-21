@@ -3,7 +3,7 @@ export const detailsListMapping= {
         assignRM:"AssigneeName",
         status:"Status",
         dueDate:"DueDate",
-        expectDate:"DateFounded",
+        expectDate:"ExpectedConversionDate",
         priority:"Priority",
         localComponentName:"InternalInformation.AnchorCompanyLocalName",
         englishComponentName:"InternalInformation.AnchorCompanyEnglishName",

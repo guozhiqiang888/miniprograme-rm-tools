@@ -6,7 +6,14 @@
                 <p *ngIf="params.value!='' && params.placeholder !== 'Calendar'">
                     {{params.value}}
                 </p>
-                <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' readonly='true' required="required" [(ngModel)]="day" type="date" class="datepickerstyle" value="2019-10-18"/>
+                <div *ngIf = "params.mapping == 'dueDate'">
+                    <input type="text"  *ngIf="params.placeholder === 'Calendar'" class="ditepickerbox" readonly='true' value="{{params.value}}">
+                    <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' readonly='true' required="required" [(ngModel)]="dueday" type="date" class="datepickerstyle"/>
+                </div>
+                <div *ngIf = "params.mapping == 'expectDate'">
+                    <input type="text"  *ngIf="params.placeholder === 'Calendar'" class="ditepickerbox" readonly='true' value="{{params.value}}">
+                    <input *ngIf="params.placeholder === 'Calendar'"(input)='dateChange()' readonly='true' required="required" [(ngModel)]="expectDate" type="date" class="datepickerstyle"/>
+                </div>
             </div>
             <input *ngIf="!params.imgSrc && params.name!=='Comments'" type="text" readonly=true value="{{params.value ==''? '' : params.value }}" 
             class="list-warning" style="width: 100%;">

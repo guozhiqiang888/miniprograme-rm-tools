@@ -28,8 +28,8 @@ export class ItemsComponent implements OnInit{
         //     "day": 2
         //} //new NgbDate(now.getFullYear(), now.getMonth()+1, now.getDate());
         let date = new Date();
-        this.day = date.getFullYear()+"-"+date.getMonth()+1 + "-" +date.getDate();
-        
+        this.day = date.getFullYear()+"-"+(date.getMonth()+1) + "-" +date.getDate();
+        console.log(this.params);
     }
     dateChange(){
         console.log(this.day);
