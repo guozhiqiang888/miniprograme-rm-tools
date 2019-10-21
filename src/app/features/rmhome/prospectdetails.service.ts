@@ -37,6 +37,10 @@ export class ProspectDetailsService{
         }); 
         return data;
     } 
+    contactResponseMapping(contactResponse:object){
+        
+        console.log(this.detailsList)
+    }
     mappingTitle(title:string){
         return title.includes('General')?'status': title.includes('Contact')?'contactInformation': title.includes('Internal')?'InternalInformation':title.includes('Key')?'keyPerson':'';
     }

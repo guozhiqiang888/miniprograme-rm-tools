@@ -51,12 +51,31 @@ export class ProspectDetailsComponent implements OnInit{
 
   toogleDownUp(e,isDefaultShow){
     console.log(e,isDefaultShow);
+    switch(e.target.id){
+      case '2':
+        this.getContactRequest();
+        break;
+      case '3':
+        break;
+      case '4':
+        break;
+    }
     if(isDefaultShow){
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_down_thick.png'
     }else{
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_up_thick.png'
     }
     this.paramsValue['lists'][e.target.id].defaultShow = !this.paramsValue['lists'][e.target.id].defaultShow
+  }
+  getContactRequest(){
+    let _this=this;
+    this.requestService.requestGSP({
+      requestName:'prospectContacts',
+      method:'get',
+      params:{}
+    },function(data){
+      _this.prospectDetailsService.contactResponseMapping(JSON.parse(data['_body']));
+    });
   }
   submit(){
     console.log('asdasdasd');

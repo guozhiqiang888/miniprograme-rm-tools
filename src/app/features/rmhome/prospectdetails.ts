@@ -54,23 +54,24 @@ export const optionsDetials ={
           {name: 'HUB customer code', mapping: 'hubCode',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Date founded', mapping: 'dateFounded',editAble:false, value:'', placeholder:'Enter referral'}
         ]
-     },{
-      listIndex:'3',
-      title: 'Key person',
-      iconStyle: "icon-down",
-      titleImg:'assets/imgs/icn_User.png',
-      titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
-      showTitle:false,
-      defaultShow: false,
-      list:[
-        {name: 'Local name', mapping: 'localName',editAble:false, value:'', placeholder:'Enter name'},
-        {name: 'English name', mapping: 'englishName',editAble:false, value:'', placeholder:'Enter name'},
-        {name: 'Contact personal title', mapping: 'contactPersonalTitle',editAble:false, value:'', placeholder:'Enter title'},
-        {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter Gender'},
-        {name: 'City', mapping: 'city',editAble:false, value:'', placeholder:'Enter city'}
-      ]
-    },
-    {
+     }
+    //  ,{
+    //   listIndex:'3',
+    //   title: 'Key person',
+    //   iconStyle: "icon-down",
+    //   titleImg:'assets/imgs/icn_User.png',
+    //   titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
+    //   showTitle:false,
+    //   defaultShow: false,
+    //   list:[
+    //     {name: 'Local name', mapping: 'localName',editAble:false, value:'', placeholder:'Enter name'},
+    //     {name: 'English name', mapping: 'englishName',editAble:false, value:'', placeholder:'Enter name'},
+    //     {name: 'Contact personal title', mapping: 'contactPersonalTitle',editAble:false, value:'', placeholder:'Enter title'},
+    //     {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter Gender'},
+    //     {name: 'City', mapping: 'city',editAble:false, value:'', placeholder:'Enter city'}
+    //   ]
+    // }
+    ,{
       listIndex:'3',
        title:"Primary Contact",
        iconStyle: "icon-down",
@@ -90,10 +91,10 @@ export const optionsDetials ={
            {name: 'Contact address', mapping: 'contactAddress',editAble:false,  value:'',placeholder:'Enter here'},
            {name: 'Contact country', mapping: 'contactCountry',editAble:false, value:'', placeholder:'Enter country'},
            {name: 'Contact province', mapping: 'contactProvience',editAble:false, value:'', placeholder:'Enter province'},
-           {name: 'HUB customer code', mapping: 'hubCode', editAble:false,value:'', placeholder:'Enter code'},
            {name: 'Referral event', mapping: 'referralEvent',editAble:false, value:'', placeholder:'Enter referral'}
        ]
-     },
+     }
+     ,
      {
       listIndex:'4',
        title: 'Activity',

@@ -27,7 +27,6 @@ export const detailsListMapping= {
         contactAddress:"",
         contactCountry:"",
         contactProvience:"",
-        hubCode:"InternalInformation.HUBCustomerCode",
         referralEvent:""
     },
     InternalInformation:{
