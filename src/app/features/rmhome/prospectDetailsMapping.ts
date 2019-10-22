@@ -16,17 +16,17 @@ export const detailsListMapping= {
         Website:"Website"
     },
     contactInformation:{
-        chineseName:"LocalName",
+        chineseName:"Local",
         englishName:"EnglishName",
-        personalTitle:"",
-        gender:"",
-        primaryNumber:"",
-        secondNumber:"",
-        primaryEmail:"",
-        secondEmail:"",
+        personalTitle:"Title",
+        gender:"Gender",
+        primaryNumber:"PrimaryPhone",
+        secondNumber:"SecondaryPhone",
+        primaryEmail:"PrimaryEmail",
+        secondEmail:"SecondaryEmail",
         contactAddress:"",
         contactCountry:"",
-        contactProvience:"",
+        contactProvience:"Location",
         referralEvent:""
     },
     InternalInformation:{
@@ -46,10 +46,10 @@ export const detailsListMapping= {
         dateFounded:"DateFounded"
     },
     keyPerson:{
-        localName:"",
-        englishName:"",
-        contactPersonalTitle:"",
-        gender:"",
-        city:""
+        chineseName:"Local",
+        englishName:"EnglishName",
+        personalTitle:"Title",
+        gender:"Gender",
+        contactProvience:"Location"
     }
 }

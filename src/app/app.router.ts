@@ -1,7 +1,7 @@
 import { Routes} from '@angular/router';
  
 let appRoute : Routes=[
-    
+
     {
         path:'reports',
         loadChildren:"./features/reports/reports.module#ReportsModule"

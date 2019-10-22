@@ -41,8 +41,8 @@ export class ProspectDetailsComponent implements OnInit{
       }
     }, function(data){
       try{
-        // _this.prospectDetails = JSON.parse(data)['body'];
         _this.prospectDetails = _this.prospectDetailsService.responseMapping(JSON.parse(data['_body']));//['body']
+        _this.getContactRequest();
       }catch(e){
         console.error(e);
       }
@@ -51,15 +51,15 @@ export class ProspectDetailsComponent implements OnInit{
 
   toogleDownUp(e,isDefaultShow){
     console.log(e,isDefaultShow);
-    switch(e.target.id){
-      case '2':
-        this.getContactRequest();
-        break;
-      case '3':
-        break;
-      case '4':
-        break;
-    }
+    // switch(e.target.id){
+    //   case '2':
+    //     this.getContactRequest();
+    //     break;
+    //   case '3':
+    //     break;
+    //   case '4':
+    //     break;
+    // }
     if(isDefaultShow){
       this.paramsValue['lists'][e.target.id].titleImgRight = 'assets/imgs/icn_Chevron_down_thick.png'
     }else{
@@ -74,7 +74,8 @@ export class ProspectDetailsComponent implements OnInit{
       method:'get',
       params:{}
     },function(data){
-      _this.prospectDetailsService.contactResponseMapping(JSON.parse(data['_body']));
+      _this.prospectDetailsService.responseMappingById(JSON.parse(data['_body'])["ProspectContacts"],'2');
+      _this.prospectDetailsService.responseMappingById(JSON.parse(data['_body'])["ProspectContacts"],'3');
     });
   }
   submit(){

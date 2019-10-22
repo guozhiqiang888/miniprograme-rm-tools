@@ -8,7 +8,7 @@ export const optionsDetials ={
        showTitle:true,
        defaultShow: true,
        list:[
-            { name:'Assign RM', 
+            { name:'Assigned', 
               iconStyle:'icon-right', editAble:true,
             imgSrc:'assets/imgs/icn_chevron_right_thick.png',mapping:'assignRM',value:'', placeholder:'Select RM'},
             {name: 'Status',  iconStyle:'icon-right',editAble:true,
@@ -42,7 +42,7 @@ export const optionsDetials ={
           {name: 'Financing info', mapping: 'financingInfo',editAble:false, value:'', placeholder:'Enter info'},
           {name: 'Customs info', mapping: 'customInfo',editAble:false, value:'', placeholder:'Enter info'},
           {name: 'Registration type', mapping: 'registrationType',editAble:false, value:'', placeholder:'Enter type'},
-          {name: 'Is existing AMH customer', mapping: 'isAMHcustomer',editAble:false, value:'', placeholder:'Enter referral'},
+          {name: 'Existing AMH customer', mapping: 'isAMHcustomer',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor company relationship', mapping: 'anchorRelationship',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor company local name', mapping: 'anchorLocalName',editAble:false, value:'', placeholder:'Enter referral'},
           {name: 'Anchor company english name', mapping: 'anchorEnglishName',editAble:false, value:'', placeholder:'Enter referral'},
@@ -55,22 +55,22 @@ export const optionsDetials ={
           {name: 'Date founded', mapping: 'dateFounded',editAble:false, value:'', placeholder:'Enter referral'}
         ]
      }
-    //  ,{
-    //   listIndex:'3',
-    //   title: 'Key person',
-    //   iconStyle: "icon-down",
-    //   titleImg:'assets/imgs/icn_User.png',
-    //   titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
-    //   showTitle:false,
-    //   defaultShow: false,
-    //   list:[
-    //     {name: 'Local name', mapping: 'localName',editAble:false, value:'', placeholder:'Enter name'},
-    //     {name: 'English name', mapping: 'englishName',editAble:false, value:'', placeholder:'Enter name'},
-    //     {name: 'Contact personal title', mapping: 'contactPersonalTitle',editAble:false, value:'', placeholder:'Enter title'},
-    //     {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter Gender'},
-    //     {name: 'City', mapping: 'city',editAble:false, value:'', placeholder:'Enter city'}
-    //   ]
-    // }
+     ,{
+      listIndex:'2',
+      title: 'Key person',
+      iconStyle: "icon-down",
+      titleImg:'assets/imgs/icn_User.png',
+      titleImgRight:'assets/imgs/icn_Chevron_down_thick.png',
+      showTitle:false,
+      defaultShow: false,
+      list:[
+        {name: 'Local name', mapping: 'chineseName',editAble:false, value:'', placeholder:'Enter name'},
+        {name: 'English name', mapping: 'englishName',editAble:false, value:'', placeholder:'Enter name'},
+        {name: 'Contact personal title', mapping: 'personalTitle',editAble:false, value:'', placeholder:'Enter title'},
+        {name: 'Gender', mapping: 'gender', value:'',editAble:false, placeholder:'Enter Gender'},
+        {name: 'City', mapping: 'contactProvience',editAble:false, value:'', placeholder:'Enter city'}
+      ]
+    }
     ,{
       listIndex:'3',
        title:"Primary Contact",

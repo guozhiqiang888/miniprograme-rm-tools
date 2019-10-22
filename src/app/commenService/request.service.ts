@@ -1,12 +1,12 @@
 import  { Http } from '@angular/http';
-import { appConfig } from '../../assets/settings/app.config'
+import { appSettingConfig } from '../../assets/settings/app.config'
 import { apiServiice } from './api.service.config'
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RequestService{
     urlName:string;
-    private config = appConfig;
+    private config = appSettingConfig;
     constructor(
         private http:Http,
     ){
